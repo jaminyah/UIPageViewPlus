@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         print("Adding UIView")
         
         // Instantiate viewcontroller for pageviewcontroller datasource
-        let wxViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "wxViewController") as? WxViewController
+        //let wxViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "wxViewController") as? WxViewController
         
         guard let skyCondition = weatherField.text, skyCondition != "" else {
             // Set frame to red
@@ -88,24 +88,24 @@ class ViewController: UIViewController {
         let humidityToInt = Int(humidity)
         
         // Create viewModel with input data
-        forecast = Forecast(sky: skyCondition, temperature: tempToInt, humidity: humidityToInt, city: city, state: state)
-        viewModel = ViewModel(forecast: forecast!)
+       // forecast = Forecast(sky: skyCondition, temperature: tempToInt!, humidity: humidityToInt!, city: city, state: state)
+        //viewModel = ViewModel(forecast: forecast!)
     
-        guard let cityRegion = viewModel?.cityRegion, cityRegion != "" else {
+        /*guard let cityRegion = viewModel?.cityRegion, cityRegion != "" else {
             print("cityRegion value is nil")
             return
-        }
+        }*/
         
-        print("CityRegion: \(cityRegion)")
-        wxViewController?.city = cityRegion
+        //print("CityRegion: \(cityRegion)")
+        /*wxViewController?.city = cityRegion
         wxViewController?.image = viewModel.image
         wxViewController?.temperature = viewModel.temperature
-        wxViewController?.humidity = viewModel.humidity
+        wxViewController?.humidity = viewModel.humidity*/
         
         // Pass wxViewController to pageviewcontroller via notification
        // NotificationCenter.default.post(name: .wxViewNotification, object: wxViewController)
         
-        forecast = Forecast(sky: skyCondition, temperature: tempToInt, humidity: humidityToInt, city: city, state: state)
+        forecast = Forecast(sky: skyCondition, temperature: tempToInt!, humidity: humidityToInt!, city: city, state: state)
         
         // Push pageviewcontroller via segue
         performSegue(withIdentifier: "pageViewSegue", sender: self)
@@ -120,6 +120,4 @@ class ViewController: UIViewController {
         destinationVC.wxData = forecast
     
     }
-
-
 }

@@ -25,14 +25,14 @@ struct ViewModel {
     }
     
     func setCityRegion(forecast: Forecast) -> String {
-       let cityRegion = forecast.city! + ", " + forecast.state!
+       let cityRegion = forecast.city + ", " + forecast.state
         return cityRegion
     }
     
     func setWeatherImage(forecast: Forecast) -> UIImage {
         var image: UIImage
         
-        switch forecast.sky! {
+        switch forecast.sky {
         case "Sunny":
             image = #imageLiteral(resourceName: "Sun")
         case "Cloudy":
