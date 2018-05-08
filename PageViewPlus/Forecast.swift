@@ -12,12 +12,12 @@ import UIKit
 
 struct Forecast {
     let sky: String
-    let temperature: Int
-    let humidity: Int
+    let temperature: String
+    let humidity: String
     let city: String
     let state: String
     
-    init(sky: String, temperature: Int, humidity: Int, city: String, state: String) {
+    init(sky: String, temperature: String, humidity: String, city: String, state: String) {
         self.sky = sky
         self.temperature = temperature
         self.humidity = humidity

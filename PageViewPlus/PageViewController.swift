@@ -23,10 +23,10 @@ class PageViewController: UIPageViewController {
     var pages: [UIViewController] = []
     var wxData: Forecast?
     
-    fileprivate func getViewController(withIdentifier identifier: String) -> UIViewController
+   /* fileprivate func getViewController(withIdentifier identifier: String) -> UIViewController
     {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
-    }
+    }*/
     
     override func viewDidLoad()
     {
@@ -34,71 +34,51 @@ class PageViewController: UIPageViewController {
         self.dataSource = self
         //self.delegate   = self
         
-        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "wxViewController") as? WxViewController
-
-        // Listen for new viewController
-       // NotificationCenter.default.addObserver(self, selector: #selector(getNewViewController(_ :)), name: .wxViewNotification, object: viewController)
-        
-        guard let city = wxData?.city, city != ""  else {
-            print("city error")
-            return
-        }
-        viewController?.city = city
-        
-        guard let temp = wxData?.temperature, temp != -99  else {
-            print("temperature error")
-            return
-        }
-        viewController?.temperature = String(describing: temp)
-        
-        pages.append(viewController!)
-        
-
         if let firstVC = pages.first
-        {
+       {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
-        }
+       }
     }
-    
-    
-  /*  func getNewViewController(_ notification: Notification) {
-        print("In getViewController")
-        viewController = notification.object as! WxViewController
-        
-            pages.append(viewController)
-        
-        let cityRegion = viewController.cityRegion.text
-            print(cityRegion!)
-    }*/
+
 }
 
 
 extension PageViewController: UIPageViewControllerDataSource
 {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
- {
-        
+    {
         guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
-        
         let previousIndex = viewControllerIndex - 1
-        
-        guard previousIndex >= 0          else { return pages.last }
+    
+        if previousIndex < 0 {
+            return nil
+        } else {
+            return pages[previousIndex]
+        }
+/*
+     guard previousIndex >= 0  else { return pages.last }
         
         guard pages.count > previousIndex else { return nil        }
+ */
         
-        return pages[previousIndex]
+       // return pages[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
         guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
-        
         let nextIndex = viewControllerIndex + 1
         
-        guard nextIndex < pages.count else { return pages.first }
+        if nextIndex < pages.count {
+            return pages[nextIndex]
+        } else {
+            return nil
+        }
+        
+    /*    guard nextIndex < pages.count else { return pages.first }
         
         guard pages.count > nextIndex else { return nil         }
         
-        return pages[nextIndex]
-    }
+        return pages[nextIndex] */
+    } 
 }

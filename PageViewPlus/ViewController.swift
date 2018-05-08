@@ -55,69 +55,54 @@ class ViewController: UIViewController {
             return
         }
         
-        guard let temperature = tempLabel.text, temperature != "" else {
+        guard let aTemp = tempLabel.text, aTemp != "" else {
             tempLabel.layer.borderColor = UIColor(red: 0.7, green: 0.0, blue: 0.0, alpha: 1.0).cgColor
             tempLabel.layer.borderWidth = 1.0
             print("Temperature is empty")
             return
         }
         
-        guard let humidity = humidityLabel.text, humidity != "" else {
+        guard let aHumidity = humidityLabel.text, aHumidity != "" else {
             humidityLabel.layer.borderColor = UIColor(red: 0.7, green: 0.0, blue: 0.0, alpha: 1.0).cgColor
             humidityLabel.layer.borderWidth = 1.0
             print("Humidity is empty")
             return
         }
         
-        guard let city = cityTextField.text, city != "" else {
+        guard let aCity = cityTextField.text, aCity != "" else {
             cityTextField.layer.borderColor = UIColor(red: 0.7, green: 0.0, blue: 0.0, alpha: 1.0).cgColor
             cityTextField.layer.borderWidth = 1.0
             print("City field is empty")
             return
         }
         
-        guard let state = stateTextField.text, state != "" else {
+        guard let aState = stateTextField.text, aState != "" else {
             stateTextField.layer.borderColor = UIColor(red: 0.7, green: 0.0, blue: 0.0, alpha: 1.0).cgColor
             stateTextField.layer.borderWidth = 1.0
             print("State field is empty")
             return
         }
-
-        // Cast inputs from Sting to type Int
-        let tempToInt = Int(temperature)
-        let humidityToInt = Int(humidity)
         
-        // Create viewModel with input data
-       // forecast = Forecast(sky: skyCondition, temperature: tempToInt!, humidity: humidityToInt!, city: city, state: state)
-        //viewModel = ViewModel(forecast: forecast!)
-    
-        /*guard let cityRegion = viewModel?.cityRegion, cityRegion != "" else {
-            print("cityRegion value is nil")
-            return
-        }*/
-        
-        //print("CityRegion: \(cityRegion)")
-        /*wxViewController?.city = cityRegion
-        wxViewController?.image = viewModel.image
-        wxViewController?.temperature = viewModel.temperature
-        wxViewController?.humidity = viewModel.humidity*/
-        
-        // Pass wxViewController to pageviewcontroller via notification
-       // NotificationCenter.default.post(name: .wxViewNotification, object: wxViewController)
-        
-        forecast = Forecast(sky: skyCondition, temperature: tempToInt!, humidity: humidityToInt!, city: city, state: state)
+        forecast = Forecast(sky: skyCondition, temperature: aTemp, humidity: aHumidity, city: aCity, state: aState)
         
         // Push pageviewcontroller via segue
         performSegue(withIdentifier: "pageViewSegue", sender: self)
     }
     
-
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! PageViewController
-        destinationVC.wxData = forecast
-    
+        guard let forecast = forecast else {
+            return
+        }
+        let viewController = WxViewModel(forecast: forecast).createViewController() //else {
+           // return
+        //}
+        
+        if let destinationVC = segue.destination as? PageViewController {
+            destinationVC.pages.append(viewController!)
+        //destinationVC.wxData = forecast
+        }
     }
 }

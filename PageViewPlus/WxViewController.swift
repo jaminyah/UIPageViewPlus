@@ -11,13 +11,13 @@ import UIKit
 class WxViewController: UIViewController {
     
     @IBOutlet weak var cityRegion: UILabel!
-    @IBOutlet weak var forecastImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var unitLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     
     // Create initial values for Outlets
-    var city = "Dallas, TX"
+    var cityState = "Dallas, TX"
     var image = #imageLiteral(resourceName: "PartlySunny")
     var temperature = "80"
     var humidity = "30"
@@ -29,11 +29,10 @@ class WxViewController: UIViewController {
         self.unitLabel.text = "\u{00B0}F"
         
         // Set initial values
-        cityRegion.text = city
-        forecastImageView.image = image
+        cityRegion.text = cityState
+        imageView.image = image
         tempLabel.text = temperature
         humidityLabel.text = humidity
-
     }
 
     override func didReceiveMemoryWarning() {

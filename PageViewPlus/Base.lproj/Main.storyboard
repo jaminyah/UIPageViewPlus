@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G20015" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MYQ-tw-Cw3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MYQ-tw-Cw3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbU-Tg-8zC">
-                                <rect key="frame" x="206" y="205" width="13" height="21"/>
+                                <rect key="frame" x="206" y="205" width="14" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -117,6 +117,7 @@
                             <constraint firstItem="FHP-iv-Jni" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MJi-H3-l4c"/>
                             <constraint firstItem="GbU-Tg-8zC" firstAttribute="top" secondItem="cfG-bx-LFB" secondAttribute="bottom" constant="22" id="MjX-4X-Gm6"/>
                             <constraint firstItem="Kzt-8C-Swl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N5B-Qb-xji"/>
+                            <constraint firstAttribute="trailing" secondItem="cfG-bx-LFB" secondAttribute="trailing" constant="72" id="N8j-FS-8vZ"/>
                             <constraint firstItem="Kzt-8C-Swl" firstAttribute="top" secondItem="BsX-Tf-th0" secondAttribute="bottom" constant="29" id="NVv-UT-SGZ"/>
                             <constraint firstItem="pbb-Vd-l6A" firstAttribute="leading" secondItem="Fae-bo-5XF" secondAttribute="trailing" constant="34" id="Pxp-N0-QEe"/>
                             <constraint firstItem="FHP-iv-Jni" firstAttribute="top" secondItem="MBq-KW-olc" secondAttribute="bottom" constant="54" id="Q79-dR-RY6"/>
@@ -124,6 +125,7 @@
                             <constraint firstItem="MBq-KW-olc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="U0d-R7-h9I"/>
                             <constraint firstItem="pbb-Vd-l6A" firstAttribute="leading" secondItem="Fae-bo-5XF" secondAttribute="trailing" constant="34" id="WVy-31-5Kt"/>
                             <constraint firstItem="Fae-bo-5XF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XuF-9j-N88"/>
+                            <constraint firstAttribute="trailing" secondItem="GbU-Tg-8zC" secondAttribute="trailing" constant="100" id="ZHO-vT-DR0"/>
                             <constraint firstItem="Fae-bo-5XF" firstAttribute="top" secondItem="FHP-iv-Jni" secondAttribute="bottom" constant="23" id="ZP1-79-RtA"/>
                             <constraint firstItem="Lfg-6m-KFq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Zcq-Pv-dg8"/>
                             <constraint firstItem="Kzt-8C-Swl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bj4-wA-TtO"/>
@@ -136,10 +138,10 @@
                             <constraint firstItem="pbb-Vd-l6A" firstAttribute="top" secondItem="Kzt-8C-Swl" secondAttribute="bottom" constant="16" id="mBo-Fh-UtO"/>
                             <constraint firstItem="Kzt-8C-Swl" firstAttribute="leading" secondItem="FHP-iv-Jni" secondAttribute="trailing" constant="44" id="mQu-t9-0yO"/>
                             <constraint firstItem="i4f-gI-Y3R" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="omd-tw-71D"/>
-                            <constraint firstItem="cfG-bx-LFB" firstAttribute="leading" secondItem="Afr-ya-FZ1" secondAttribute="trailing" constant="9" id="rmW-q4-6VV"/>
+                            <constraint firstItem="cfG-bx-LFB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Afr-ya-FZ1" secondAttribute="trailing" constant="8" symbolic="YES" id="rmW-q4-6VV"/>
                             <constraint firstItem="Fae-bo-5XF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rtz-h1-VpA"/>
                             <constraint firstItem="Afr-ya-FZ1" firstAttribute="leading" secondItem="of3-XR-uUr" secondAttribute="trailing" constant="8" id="tfq-aL-SH4"/>
-                            <constraint firstItem="GbU-Tg-8zC" firstAttribute="leading" secondItem="BsX-Tf-th0" secondAttribute="trailing" constant="9" id="w4M-Up-sCg"/>
+                            <constraint firstItem="GbU-Tg-8zC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BsX-Tf-th0" secondAttribute="trailing" constant="8" symbolic="YES" id="w4M-Up-sCg"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -201,15 +203,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="488.5" y="685.5"/>
+            <point key="canvasLocation" x="-223" y="686"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="OFP-cH-irb">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="kNO-FO-8sB" customClass="PageViewController" customModule="PageViewPlus" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kNO-FO-8sB" customClass="PageViewController" customModule="PageViewPlus" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAG-FO-ZCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="686"/>
+            <point key="canvasLocation" x="566" y="686"/>
         </scene>
         <!--Wx View Controller-->
         <scene sceneID="dGv-3y-6mo">
@@ -280,8 +282,9 @@
                             <constraint firstItem="Mvl-OP-Tyo" firstAttribute="top" secondItem="jpq-qm-tjy" secondAttribute="bottom" constant="25" id="8xd-FL-xqx"/>
                             <constraint firstItem="2g2-6p-1xT" firstAttribute="leading" secondItem="oYE-9l-ywK" secondAttribute="leading" id="BqL-na-9Vp"/>
                             <constraint firstItem="Mvl-OP-Tyo" firstAttribute="top" secondItem="Dov-sX-gxo" secondAttribute="bottom" constant="25" id="C4V-Ab-EOW"/>
-                            <constraint firstItem="mwk-OZ-OdR" firstAttribute="leading" secondItem="pVb-iR-dq5" secondAttribute="trailing" constant="22" id="D32-L3-jpu"/>
+                            <constraint firstItem="mwk-OZ-OdR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pVb-iR-dq5" secondAttribute="trailing" constant="8" symbolic="YES" id="D32-L3-jpu"/>
                             <constraint firstItem="pVb-iR-dq5" firstAttribute="leading" secondItem="oYE-9l-ywK" secondAttribute="leadingMargin" constant="27" id="JHV-ib-Bg3"/>
+                            <constraint firstItem="H3E-wf-4ja" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oYE-9l-ywK" secondAttribute="leadingMargin" id="LLr-zS-nug"/>
                             <constraint firstAttribute="trailing" secondItem="2g2-6p-1xT" secondAttribute="trailing" id="LVv-CU-280"/>
                             <constraint firstItem="zSC-f7-T5y" firstAttribute="centerX" secondItem="oYE-9l-ywK" secondAttribute="centerX" id="X7b-lh-zXv"/>
                             <constraint firstItem="Dov-sX-gxo" firstAttribute="leading" secondItem="oYE-9l-ywK" secondAttribute="leading" constant="16" id="Zht-EK-gHg"/>
@@ -289,7 +292,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="H3E-wf-4ja" secondAttribute="trailing" constant="10" id="ea6-ho-TGl"/>
                             <constraint firstItem="zSC-f7-T5y" firstAttribute="top" secondItem="2g2-6p-1xT" secondAttribute="bottom" constant="43" id="kHj-Kf-7lR"/>
                             <constraint firstItem="2g2-6p-1xT" firstAttribute="leading" secondItem="oYE-9l-ywK" secondAttribute="leading" id="pet-L8-ECr"/>
+                            <constraint firstAttribute="trailing" secondItem="mwk-OZ-OdR" secondAttribute="trailing" constant="108" id="r4e-GR-s9T"/>
                             <constraint firstItem="H3E-wf-4ja" firstAttribute="top" secondItem="w8l-Cb-laD" secondAttribute="bottom" constant="44" id="sYA-uo-soE"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jpq-qm-tjy" secondAttribute="trailing" constant="20" symbolic="YES" id="yyt-In-bOT"/>
                             <constraint firstItem="mwk-OZ-OdR" firstAttribute="top" secondItem="zSC-f7-T5y" secondAttribute="bottom" constant="44" id="zaP-Jf-7P3"/>
                             <constraint firstAttribute="trailing" secondItem="2g2-6p-1xT" secondAttribute="trailing" id="zsK-es-1Vr"/>
                             <constraint firstItem="jpq-qm-tjy" firstAttribute="leading" secondItem="4M6-6C-ibo" secondAttribute="trailing" constant="10" id="zyy-0t-vt6"/>
@@ -297,15 +302,15 @@
                     </view>
                     <connections>
                         <outlet property="cityRegion" destination="2g2-6p-1xT" id="AEH-WZ-RHN"/>
-                        <outlet property="forecastImageView" destination="zSC-f7-T5y" id="9Ju-bH-R0R"/>
                         <outlet property="humidityLabel" destination="4M6-6C-ibo" id="Ruw-r3-GhU"/>
+                        <outlet property="imageView" destination="zSC-f7-T5y" id="Vl6-kg-yRn"/>
                         <outlet property="tempLabel" destination="pVb-iR-dq5" id="QUY-jP-ga4"/>
                         <outlet property="unitLabel" destination="mwk-OZ-OdR" id="4sK-Rf-wL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRc-HP-nyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.25" y="681.33802816901414"/>
+            <point key="canvasLocation" x="1296" y="686"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l9z-Jx-rpD">
@@ -313,7 +318,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MYQ-tw-Cw3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3c8-5c-pzC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -323,7 +328,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9P-3L-iWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="686"/>
+            <point key="canvasLocation" x="-1005" y="686"/>
         </scene>
     </scenes>
 </document>
