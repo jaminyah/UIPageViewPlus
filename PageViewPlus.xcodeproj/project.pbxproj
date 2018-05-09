@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0D3BE120A3365100E33066 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D3BE020A3365100E33066 /* Pages.swift */; };
 		FA0EF36B208FB41100A93375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF36A208FB41100A93375 /* AppDelegate.swift */; };
 		FA0EF36D208FB41100A93375 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EF36C208FB41100A93375 /* ViewController.swift */; };
 		FA0EF370208FB41100A93375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0EF36E208FB41100A93375 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0D3BE020A3365100E33066 /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
 		FA0EF367208FB41100A93375 /* PageViewPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageViewPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0EF36A208FB41100A93375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA0EF36C208FB41100A93375 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				FADE595A2090CD6700F98562 /* Forecast.swift */,
 				FAAE9059209261710003285D /* Notification.swift */,
 				FA58C4AA20A209E0003F0E87 /* WxViewModel.swift */,
+				FA0D3BE020A3365100E33066 /* Pages.swift */,
 			);
 			path = PageViewPlus;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				FAAE905A209261710003285D /* Notification.swift in Sources */,
 				FA0EF36B208FB41100A93375 /* AppDelegate.swift in Sources */,
 				FAD16DD420904EF500A0A056 /* ViewModel.swift in Sources */,
+				FA0D3BE120A3365100E33066 /* Pages.swift in Sources */,
 				FA0EF37F208FBB5500A93375 /* WxViewController.swift in Sources */,
 				FA58C4AB20A209E0003F0E87 /* WxViewModel.swift in Sources */,
 			);

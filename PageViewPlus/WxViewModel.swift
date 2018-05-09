@@ -8,19 +8,19 @@
 
 import UIKit
 
-class WxViewModel: UIViewController {
+class WxViewModel {
     
     let forecast: Forecast?
     
     init(forecast: Forecast) {
         self.forecast = forecast
-        super.init(nibName: nil, bundle: nil)
+        //super.init(nibName: nil, bundle: nil)
     }
     
     // Required to conform with NSCoder protocol
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented.")
-    }
+   // required init?(coder aDecoder: NSCoder) {
+        //fatalError("init(coder:) has not been implemented.")
+    //}
     
     func createViewController() -> UIViewController? {
         

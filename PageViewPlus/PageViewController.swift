@@ -20,8 +20,9 @@ class PageViewController: UIPageViewController {
     }()*/
     
     // empty array of views
-    var pages: [UIViewController] = []
-    var wxData: Forecast?
+    var pages = Pages()
+    //var pages: [UIViewController] = []
+    //var wxData: Forecast?
     
    /* fileprivate func getViewController(withIdentifier identifier: String) -> UIViewController
     {
@@ -34,7 +35,7 @@ class PageViewController: UIPageViewController {
         self.dataSource = self
         //self.delegate   = self
         
-        if let firstVC = pages.first
+        if let firstVC = pages.array.first
        {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
        }
@@ -47,13 +48,13 @@ extension PageViewController: UIPageViewControllerDataSource
 {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
     {
-        guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.array.index(of: viewController) else { return nil }
         let previousIndex = viewControllerIndex - 1
     
         if previousIndex < 0 {
             return nil
         } else {
-            return pages[previousIndex]
+            return pages.array[previousIndex]
         }
 /*
      guard previousIndex >= 0  else { return pages.last }
@@ -66,11 +67,11 @@ extension PageViewController: UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
-        guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.array.index(of: viewController) else { return nil }
         let nextIndex = viewControllerIndex + 1
         
-        if nextIndex < pages.count {
-            return pages[nextIndex]
+        if nextIndex < pages.array.count {
+            return pages.array[nextIndex]
         } else {
             return nil
         }

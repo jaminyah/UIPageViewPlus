@@ -18,8 +18,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var stateTextField: UITextField!
     
     var forecast: Forecast?
-    var viewModel: ViewModel!
-    var wxViewController = WxViewController()
+    var pages = Pages()
+    
+    //var viewModel: ViewModel!
+    //var wxViewController = WxViewController()
     
     let wxViewNotification = Notification.Name("wxViewNotification")
     
@@ -85,6 +87,13 @@ class ViewController: UIViewController {
         
         forecast = Forecast(sky: skyCondition, temperature: aTemp, humidity: aHumidity, city: aCity, state: aState)
         
+        guard let forecast = forecast,
+            let viewController = WxViewModel(forecast: forecast).createViewController() else {
+                return
+        }
+        
+        pages.array.append(viewController)
+        
         // Push pageviewcontroller via segue
         performSegue(withIdentifier: "pageViewSegue", sender: self)
     }
@@ -93,15 +102,11 @@ class ViewController: UIViewController {
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let forecast = forecast else {
-            return
-        }
-        let viewController = WxViewModel(forecast: forecast).createViewController() //else {
-           // return
-        //}
+ 
         
         if let destinationVC = segue.destination as? PageViewController {
-            destinationVC.pages.append(viewController!)
+            //destinationVC.pages.append(viewController)
+            destinationVC.pages.array = pages.array
         //destinationVC.wxData = forecast
         }
     }
